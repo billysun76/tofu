@@ -51,7 +51,7 @@ proxy-groups:
       - 手动切换
       - DIRECT
   - name: OpenAi
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
     type: select
     proxies:
       - 节点选择
@@ -66,6 +66,20 @@ proxy-groups:
       - DIRECT
   - name: 油管视频
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
+    type: select
+    proxies:
+      - 节点选择
+      - 自动选择
+      - 狮城节点
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
+  - name: Zoom会议
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png
     type: select
     proxies:
       - 节点选择
@@ -426,6 +440,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Zoom:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Zoom.list
+    path: ./ruleset/Zoom.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   OpenAi:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/OpenAi.list
     path: ./ruleset/OpenAi.list
@@ -567,6 +588,7 @@ rules:
   - "RULE-SET,Apple,苹果服务"
   - "RULE-SET,Telegram,电报消息"
   - "RULE-SET,Gemini,Gemini"
+  - "RULE-SET,Zoom,Zoom"
   - "RULE-SET,OpenAi,OpenAi"
   - "RULE-SET,NetEaseMusic,网易音乐"
   - "RULE-SET,Epic,游戏平台"
