@@ -78,7 +78,7 @@ proxy-groups:
       - 韩国节点
       - 手动切换
       - DIRECT
-  - name: Zoom会议
+  - name: Zoom
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png
     type: select
     proxies:
